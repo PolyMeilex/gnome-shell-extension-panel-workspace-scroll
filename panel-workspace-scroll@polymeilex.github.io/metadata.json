@@ -1,0 +1,12 @@
+{
+  "uuid": "panel-workspace-scroll@polymeilex.github.io",
+  "extension-id": "panel-workspace-scroll",
+  "gettext-domain": "gnome-shell-extensions",
+  "name": "Panel Workspace Scroll",
+  "description": "Switch workspace by mouse scroll on the panel.",
+  "shell-version": [
+    "45"
+  ],
+  "original-authors": "marynczakbartlomiej@gmail.com",
+  "url": "https://github.com/PolyMeilex/gnome-shell-extension-panel-workspace-scroll"
+}
