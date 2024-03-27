@@ -8,4 +8,4 @@ Switch workspace by mouse scroll on the panel.
 make install
 ```
 
-reload the sesion
+reload the session

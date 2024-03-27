@@ -4,7 +4,8 @@
   "name": "Panel Workspace Scroll",
   "description": "Switch workspace by mouse scroll on the panel.\nIn contrast to alternative extensions purpose of this one is to use the native scroll handler of gnome-shell, so workspace scroll should behave exactly the same as overview scroll or workspace indicator scroll.",
   "shell-version": [
-    "45"
+    "45",
+    "46"
   ],
   "original-authors": "marynczakbartlomiej@gmail.com",
   "url": "https://github.com/PolyMeilex/gnome-shell-extension-panel-workspace-scroll"
