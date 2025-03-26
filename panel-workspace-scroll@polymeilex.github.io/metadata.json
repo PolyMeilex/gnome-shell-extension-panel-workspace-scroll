@@ -6,7 +6,8 @@
   "shell-version": [
     "45",
     "46",
-    "47"
+    "47",
+    "48"
   ],
   "original-authors": "marynczakbartlomiej@gmail.com",
   "url": "https://github.com/PolyMeilex/gnome-shell-extension-panel-workspace-scroll"
