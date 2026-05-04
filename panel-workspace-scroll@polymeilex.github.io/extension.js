@@ -4,14 +4,13 @@ import Clutter from 'gi://Clutter';
 export default class PanelWorkspaceScrollExtension {
     enable() {
         this.scrollEventId = Main.panel.connect('scroll-event', (_actor, event) => Main.wm.handleWorkspaceScroll(event));
-        this.clickEventId = Main.panel.connect('button-press-event', (_actor, event) => {
-            // Middle mouse button: 2, Left: 1, Right: 3
-            if (event.get_button() === 2) {
-                Main.overview.toggle();
-                return Clutter.EVENT_STOP;
-            }
-            return Clutter.EVENT_PROPAGATE;
+
+        this.middleClickGesture = new Clutter.ClickGesture({
+            required_button: Clutter.BUTTON_MIDDLE,
         });
+
+        this.middleClickGesture.connect('recognize', () => Main.overview.toggle());
+        Main.panel.add_action(this.middleClickGesture);
     }
 
     disable() {
@@ -20,7 +19,7 @@ export default class PanelWorkspaceScrollExtension {
             this.scrollEventId = null;
         }
         if (this.clickEventId != null) {
-            Main.panel.disconnect(this.clickEventId);
+            Main.panel.remove_action(this.middleClickGesture);
             this.clickEventId = null;
         }
     }
